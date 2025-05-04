@@ -30,7 +30,7 @@ export const usePaymentStore = () => {
     };
 
     const processPayment = async (paymentDetails) => {
-        console.log('Processing payment with details:', paymentDetails);
+        
         try {
             const { token, productId, amount, paymentMethod, customerEmail, customerName, address } = paymentDetails;
             const response = await wompiApi.post('/payments', {

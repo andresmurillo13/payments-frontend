@@ -1,12 +1,76 @@
-# React + Vite
+# Wompi Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación frontend desarrollada con React y Vite para gestionar pagos con tarjeta de crédito utilizando la API de Wompi. Es parte de un proceso de evaluación técnica que incluye tanto el desarrollo frontend como backend.
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación permite a los usuarios:
+1. Ver productos disponibles en el inventario con su descripción, precio y unidades disponibles.
+2. Realizar pagos con tarjeta de crédito mediante un modal que solicita la información de la tarjeta y datos de entrega.
+3. Validar los datos de la tarjeta (incluyendo detección de logos de MasterCard y VISA).
+4. Mostrar un resumen del pago con detalles como el monto del producto, tarifa base y tarifa de entrega.
+5. Completar la transacción utilizando la API de Wompi y actualizar el inventario del producto.
 
-## Expanding the ESLint configuration
+## Características
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: SPA desarrollada con React y Vite, enfocada en diseño responsivo para dispositivos móviles.
+- **Estado Global**: Gestión de estado con Redux Toolkit.
+- **Estilos**: TailwindCSS para diseño rápido y responsivo.
+<!-- - **Pruebas**: Cobertura de pruebas superior al 80% con Jest.
+- **Despliegue**: Aplicación desplegada en AWS utilizando servicios como S3, CloudFront y RDS. -->
+
+## Requisitos Previos
+
+- Node.js (versión 16 o superior)
+- npm o yarn
+
+## Estructura del Proyecto
+
+El proyecto está organizado en varios directorios clave:
+
+```plaintext
+.env
+.gitignore
+[eslint.config.js](http://_vscodecontentref_/1)
+[index.html](http://_vscodecontentref_/2)
+[package.json](http://_vscodecontentref_/3)
+[README.md](http://_vscodecontentref_/4)
+[vite.config.js](http://_vscodecontentref_/5)
+public/
+  vite.svg
+src/
+  App.jsx
+  index.css
+  main.jsx
+  api/
+    wompiApi.js
+  assets/
+    mastercard.png
+    react.svg
+    visa.png
+  components/
+    CreditCardModal.jsx
+    DeliveryInfoForm.jsx
+    ProductDisplay.jsx
+    TransactionResult.jsx
+  helpers/
+    getEnvVariables.js
+  hooks/
+    usePaymentStore.js
+    useProcuctStore.js
+  pages/
+    HomePage.jsx
+    ProductPage.jsx
+  router/
+    AppRouter.jsx
+    router.js
+  store/
+    store.js
+    products/
+
+## Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/wompi-frontend.git
+
