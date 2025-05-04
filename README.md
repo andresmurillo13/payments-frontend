@@ -29,15 +29,6 @@ La aplicación permite a los usuarios:
 El proyecto está organizado en varios directorios clave:
 
 ```plaintext
-.env
-.gitignore
-[eslint.config.js](http://_vscodecontentref_/1)
-[index.html](http://_vscodecontentref_/2)
-[package.json](http://_vscodecontentref_/3)
-[README.md](http://_vscodecontentref_/4)
-[vite.config.js](http://_vscodecontentref_/5)
-public/
-  vite.svg
 src/
   App.jsx
   index.css
@@ -70,7 +61,20 @@ src/
 
 ## Instalación
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/wompi-frontend.git
+## Instalación
 
+Para comenzar con el proyecto, clona el repositorio e instala las dependencias:
+
+```bash
+git clone https://github.com/andresmurillo13/wompi-frontend.git
+cd wompi-frontend
+npm install
+```
+
+## Ejecución de la Aplicación
+
+Para ejecutar la aplicación, utiliza el siguiente comando:
+
+```bash
+npm run dev
+```
