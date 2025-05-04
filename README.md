@@ -58,22 +58,30 @@ src/
   store/
     store.js
     products/
-
-## Instalación
-
-## Instalación
-
-Para comenzar con el proyecto, clona el repositorio e instala las dependencias:
-
-```bash
-git clone https://github.com/andresmurillo13/wompi-frontend.git
-cd wompi-frontend
-npm install
 ```
+
+## Instalación
+
+Para comenzar con el proyecto, sigue estos pasos:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/andresmurillo13/wompi-frontend.git
+   ```
+
+2. Accede al directorio del proyecto:
+   ```bash
+   cd wompi-frontend
+   ```
+
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
 ## Ejecución de la Aplicación
 
-Para ejecutar la aplicación, utiliza el siguiente comando:
+Para ejecutar la aplicación en modo desarrollo, utiliza el siguiente comando:
 
 ```bash
 npm run dev
