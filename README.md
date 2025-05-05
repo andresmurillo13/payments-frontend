@@ -87,6 +87,8 @@ Para ejecutar la aplicación en modo desarrollo, utiliza el siguiente comando:
 npm run dev
 ```
 
+## Imagenes de la Aplicación
+
 ![alt text](image.png)
 
 ![alt text](image-1.png)
