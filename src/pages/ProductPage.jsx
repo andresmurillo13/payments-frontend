@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import DeliveryInfoForm from '../components/DeliveryInfoForm';
-import TransactionResult from '../components/TransactionResult';
+
+
 
 import CreditCardModal from '../components/CreditCardModal';
 import ProductDisplay from '../components/ProductDisplay';
@@ -35,8 +35,8 @@ export const ProductPage = () => {
                     onPayment={handlePayment}
                 />
             )}
-            {deliveryInfo && <DeliveryInfoForm setDeliveryInfo={setDeliveryInfo} />}
-            {transactionResult && <TransactionResult result={transactionResult} />}
+           
+           
            
         </div>
     );

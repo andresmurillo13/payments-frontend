@@ -66,12 +66,12 @@ Para comenzar con el proyecto, sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/andresmurillo13/wompi-frontend.git
+   git clone https://github.com/andresmurillo13/payments-frontend.git
    ```
 
 2. Accede al directorio del proyecto:
    ```bash
-   cd wompi-frontend
+   cd payments-frontend
    ```
 
 3. Instala las dependencias:
@@ -86,3 +86,9 @@ Para ejecutar la aplicación en modo desarrollo, utiliza el siguiente comando:
 ```bash
 npm run dev
 ```
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)

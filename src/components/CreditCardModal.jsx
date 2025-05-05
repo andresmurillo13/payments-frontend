@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import Swal from 'sweetalert2';
 import { usePaymentStore } from '../hooks/usePaymentStore';
-import visaLogo from '../assets/visa.png'; 
+import visaLogo from '../assets/visa.png';
 import mastercardLogo from '../assets/mastercard.png';
+import PaymentSummary from './PaymentSummary';
 
 Modal.setAppElement('#root');
 
@@ -18,10 +19,11 @@ const CreditCardModal = ({ isOpen, onRequestClose, product }) => {
         email: 'test@example.com',
         address: 'Calle 123 #45-67, Bogotá',
     });
-    const [cardType, setCardType] = useState(''); 
+    const [cardType, setCardType] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-
+    const baseFee = 5.0; // Tarifa base fija
+    const deliveryFee = 10.0; // Tarifa de entrega fija
 
     const detectCardType = (number) => {
         if (number.startsWith('4')) {
@@ -35,12 +37,12 @@ const CreditCardModal = ({ isOpen, onRequestClose, product }) => {
         return '';
     };
 
-    
+
 
     const onInputChange = (e) => {
         const { name, value } = e.target;
 
-      
+
         if (name === 'cardNumber') {
             const cardTypeDetected = detectCardType(value);
             setCardType(cardTypeDetected);
@@ -119,9 +121,14 @@ const CreditCardModal = ({ isOpen, onRequestClose, product }) => {
             overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
         >
             <h2 className="text-lg font-bold mb-4">Enter Credit Card Information</h2>
+            <PaymentSummary
+                productPrice={Number(product.price) || 0}
+                baseFee={baseFee}
+                deliveryFee={deliveryFee}
+            />
             {error && <p className="text-red-500 mb-4">{error}</p>}
             {isLoading ? (
-                <div className="flex justify-center items-center">
+                <div className="flex mt-5 justify-center items-center">
                     <div className="loader border-t-4 border-blue-500 rounded-full w-8 h-8 animate-spin"></div>
                     <p className="ml-2">Processing payment...</p>
                 </div>
